@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS 1130 - Trisha Cabel</title>
+    <title>Trisha Cabel | Digital Scrapbook & Dumps</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0284c7;
+            --bg-color: #fff0f5;
+            --card-bg: #ffffff;
+            --text-main: #59253a;
+            --text-muted: #9e6b80;
+            --accent: #f472b6;
+            --accent-hover: #ec4899;
+            --border-pink: #fbcfe8;
+            --soft-pill: #fce7f3;
         }
 
-* {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -22,10 +24,11 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4ee 100%);
             color: var(--text-main);
             line-height: 1.6;
             padding: 2rem 1rem;
+            min-height: 100vh;
         }
 
         .container {
@@ -35,25 +38,30 @@
 
         header {
             text-align: center;
-            padding: 2.5rem 1rem;
+            padding: 2.5rem 1.5rem;
             background-color: var(--card-bg);
-            border-radius: 12px;
+            border-radius: 24px;
             margin-bottom: 2rem;
-            border: 1px solid #334155;
+            border: 2px solid var(--border-pink);
+            box-shadow: 0 10px 25px rgba(244, 114, 182, 0.12);
         }
 
         .greeting {
-            font-size: 1.15rem;
+            display: inline-block;
+            background-color: var(--soft-pill);
+            color: #db2777;
+            font-size: 1rem;
             font-weight: 700;
-            color: #fbbf24;
-            margin-bottom: 0.4rem;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 0.75rem;
             letter-spacing: 0.5px;
         }
 
         header h1 {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
+            font-size: 2.1rem;
+            color: #db2777;
+            margin-bottom: 0.4rem;
         }
 
         header p {
@@ -63,12 +71,13 @@
 
         .section-title {
             font-size: 1.3rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #334155;
+            color: #be185d;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px dashed var(--border-pink);
             padding-bottom: 0.5rem;
         }
 
-        .assignments-grid {
+        .dumps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.25rem;
@@ -76,48 +85,68 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid #334155;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            padding: 1.6rem;
+            border-radius: 20px;
+            border: 2px solid var(--border-pink);
+            box-shadow: 0 6px 18px rgba(244, 114, 182, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             border-color: var(--accent);
+            box-shadow: 0 12px 24px rgba(244, 114, 182, 0.18);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #db2777;
+            background-color: var(--soft-pill);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.6rem;
+            width: fit-content;
         }
 
         .card h3 {
+            color: #be185d;
             margin-bottom: 0.5rem;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.92rem;
+            margin-bottom: 1.3rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.5rem 1rem;
+            padding: 0.55rem 1.2rem;
             background-color: var(--accent);
-            color: #0f172a;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 600;
-            border-radius: 6px;
+            border-radius: 50px;
             font-size: 0.9rem;
-            transition: background-color 0.2s;
+            text-align: center;
+            width: fit-content;
+            transition: background-color 0.2s, transform 0.2s;
         }
 
         .btn:hover {
             background-color: var(--accent-hover);
-            color: #ffffff;
+            transform: scale(1.03);
         }
 
         .btn.disabled {
-            background-color: #334155;
-            color: #94a3b8;
+            background-color: var(--soft-pill);
+            color: #c08497;
             pointer-events: none;
         }
 
@@ -125,7 +154,7 @@
             text-align: center;
             margin-top: 3rem;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.88rem;
         }
     </style>
 </head>
@@ -133,51 +162,63 @@
 
     <div class="container">
         <header>
-            <div class="greeting">Annyeonghaseyo, Mabuhay!!</div>
+            <div class="greeting">✿ Annyeonghaseyo, Mabuhay! ✿</div>
             <h1>Welcome to my build!</h1>
             <p><strong>Trisha Cabel</strong></p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">HTML and JavaScript Programming Assignments</p>
+            <p style="margin-top: 0.4rem; font-size: 0.92rem;">Little fragments of a life well lived ♡</p>
         </header>
 
-        <h2 class="section-title">Published Programming Assignments</h2>
+        <h2 class="section-title">♡ All the Little Yesterdays</h2>
 
-        <div class="assignments-grid">
-            <!-- Assignment 1 -->
+        <div class="dumps-grid">
+            <!-- Daily Life Dump -->
             <div class="card">
-                <h3>Assignment #1</h3>
-                <p>Unit Converter (Celsius to Fahrenheit, Meters to Feet, etc.)</p>
-                <a href="#" class="btn disabled">Coming Soon</a>
+                <div>
+                    <span class="card-tag">✦ Everyday</span>
+                    <h3>Daily Life Dump</h3>
+                    <p>Coffee runs, Random OOTDs, Late-night thoughts, and Little everyday moments.</p>
+                </div>
+                <a href="#" class="btn disabled">Stay Tuned</a>
             </div>
 
-            <!-- Assignment 2 -->
+            <!-- School Dump -->
             <div class="card">
-                <h3>Assignment #2</h3>
-                <p>Income Tax Calculator using JavaScript conditionals.</p>
-                <a href="#" class="btn disabled">Coming Soon</a>
+                <div>
+                    <span class="card-tag">✦ Campus</span>
+                    <h3>School Dump</h3>
+                    <p>Study sessions, Coding struggles, Campus snaps, and Memories with friends.</p>
+                </div>
+                <a href="#" class="btn disabled">Stay Tuned</a>
             </div>
 
-            <!-- Assignment 3 -->
+            <!-- Travel / Vacation Dump -->
             <div class="card">
-                <h3>Assignment #3</h3>
-                <p>Factorial, Sum, and Average of N Natural Numbers (Loops).</p>
-                <a href="#" class="btn disabled">Coming Soon</a>
+                <div>
+                    <span class="card-tag">✦ Getaways</span>
+                    <h3>Travel / Vacation Dump</h3>
+                    <p>Scenic views, Road trips, Food adventures, and Favorite getaway highlights.</p>
+                </div>
+                <a href="#" class="btn disabled">Stay Tuned</a>
             </div>
 
-            <!-- Assignment 4 -->
+            <!-- Christmas Dump -->
             <div class="card">
-                <h3>Assignment #4</h3>
-                <p>Simple Payroll System with dynamic HTML tables.</p>
-                <a href="#" class="btn disabled">Coming Soon</a>
+                <div>
+                    <span class="card-tag">✦ Holiday</span>
+                    <h3>Christmas Dump</h3>
+                    <p>Festive lights, Noche Buena feasts, Gift exchanges, and Cozy holiday vibes.</p>
+                </div>
+                <a href="#" class="btn disabled">Stay Tuned</a>
             </div>
         </div>
 
         <footer>
-            <p id="footer-text">&copy; 2026 Trisha Cabel. Hosted on GitHub Pages.</p>
+            <p id="footer-text">&copy; 2026 Trisha Cabel ♡ Hosted on GitHub Pages.</p>
         </footer>
     </div>
 
     <script>
-        console.log("Gamsahamnida, Portfolio loaded successfully.");
+        console.log("Gamsahamnida, Digital Scrapbook loaded successfully.");
     </script>
 </body>
 </html>
