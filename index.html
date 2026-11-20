@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 1130 - Trisha Cabel</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+        }
+
+         {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.5rem;
+        }
+
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent);
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+        }
+
+        .btn.disabled {
+            background-color: #334155;
+            color: #94a3b8;
+            pointer-events: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>CS 1130: Introduction to Computing</h1>
+            <p><strong>Trisha Cabel</strong></p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">HTML and JavaScript Programming Assignments</p>
+        </header>
+
+        <h2 class="section-title">Published Programming Assignments</h2>
+
+        <div class="assignments-grid">
+            <!-- Assignment 1 -->
+            <div class="card">
+                <h3>Assignment #1</h3>
+                <p>Unit Converter (Celsius to Fahrenheit, Meters to Feet, etc.)</p>
+                <a href="#" class="btn disabled">Coming Soon</a>
+            </div>
+
+            <!-- Assignment 2 -->
+            <div class="card">
+                <h3>Assignment #2</h3>
+                <p>Income Tax Calculator using JavaScript conditionals.</p>
+                <a href="#" class="btn disabled">Coming Soon</a>
+            </div>
+
+            <!-- Assignment 3 -->
+            <div class="card">
+                <h3>Assignment #3</h3>
+                <p>Factorial, Sum, and Average of N Natural Numbers (Loops).</p>
+                <a href="#" class="btn disabled">Coming Soon</a>
+            </div>
+
+            <!-- Assignment 4 -->
+            <div class="card">
+                <h3>Assignment #4</h3>
+                <p>Simple Payroll System with dynamic HTML tables.</p>
+                <a href="#" class="btn disabled">Coming Soon</a>
+            </div>
+        </div>
+
+        <footer>
+            <p id="footer-text">&copy; 2026 Trisha Cabel. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+
+    <script>
+        console.log("CS 1130 Portfolio loaded successfully.");
+    </script>
+</body>
+</html>
